@@ -9,8 +9,6 @@ export default class ContextMenu extends React.Component {
       x: this.props.x,
       y: this.props.y
     };
-
-    this._handleClick = this._handleClick.bind(this);
   }
 
   componentDidMount() {
