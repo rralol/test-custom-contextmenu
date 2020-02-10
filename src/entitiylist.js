@@ -15,7 +15,7 @@ export default class EntityList extends React.Component {
       }
       componentDidMount() {
         document.addEventListener('contextmenu', (event) => {
-            if(!(event.target.parentNode.parentNode === this.root) && this.state.contextMenuVisible) {
+            if(!(this.root.contains(event.target)) && this.state.contextMenuVisible) {
                 this._setContextMenuInvisible();
             }
         })
