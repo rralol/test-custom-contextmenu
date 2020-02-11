@@ -15,6 +15,10 @@ export default class ContextMenu extends React.Component {
     document.addEventListener("click", this.props.setMenuInvisible);
   }
 
+  componentWillUnmount() {
+    document.removeEventListener("click", this.props.setMenuInvisible);
+  }
+
   componentDidUpdate(prevProps) {
     if (this.props !== prevProps) {
       this.setState({
